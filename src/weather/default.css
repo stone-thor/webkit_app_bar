@@ -1,0 +1,119 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body
+{ 
+  font-family: "sans", "Arial", Arial, HelveticaCE, "Helvetica CE", Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;          
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;
+}       
+
+:focus {
+    outline: none;
+}
+
+span, div {
+  color: rgba(255,255,255,0.8);
+  font-size: 8pt;
+}
+
+      
+div.page {
+  width: 300px;
+  height: 500px;
+  text-align: left;         
+}
+
+/* ------------------------------------------------------------------ */
+/* header -begin */
+/* ------------------------------------------------------------------ */
+div.hdr {
+    width: 120px;
+    padding-right: 4px;
+    padding-left: 4px;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(0,0,0,0.8);
+}
+
+img.ico {
+    width: 16px; 
+    height: 16px;
+    padding: 0px;
+    vertical-align: middle;    
+}
+
+a {
+    color: #FFFFFF;   
+    text-decoration: none;    
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+span.hleft {
+    padding-right: 40px;
+}
+
+span.hright {
+    padding-left: 40px;
+}
+
+a.ico {   
+    margin: 0px;
+}
+/* ------------------------------------------------------------------ */
+/* header - end */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* weather items */
+/* ------------------------------------------------------------------ */
+
+span {
+    vertical-align: middle;
+}
+
+img.day {
+    width: 16px; 
+    height: 16px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+div.D1 {background: rgba(0,0,0,0.6);} 
+div.D2 {background: rgba(0,0,0,0.5);} 
+div.D3 {background: rgba(0,0,0,0.4);}
+div.D4 {background: rgba(0,0,0,0.3);}
+div.D5 {background: rgba(0,0,0,0.2); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;}
+
+div.D1, div.D2 , div.D3, div.D4, div.D5 {
+    line-height: 32px;
+    vertical-align: middle;
+    width: 120px;
+    padding-left: 8px;
+    margin-bottom: 0px;
+}
+
+.conditem {
+  font-weight: normal;
+}
+
+.dayitem {
+  font-size: 10pt;
+  width: 25px;
+  float: left;
+}
+
+.lowitem, .tempdivider, .highitem, .tempitem {
+  font-size: 9pt;
+  font-weight: bold;
+}
+

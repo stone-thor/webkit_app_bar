@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>app_bar</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <meta http-equiv="Content-Language" content="en-us">
+
+    <style type="TEXT/CSS">
+      <!--
+      @import url("default.css");
+      -->
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    var img = new Image();
+    img.src = 'bar.png';
+
+    var config = {
+        Left: 0,
+        Top: 90,
+        Width: 81,
+        Height: 312,
+        defaultBrowser: 'firefox',
+        defaultFileManager: 'thunar',
+        plugin: ['appInit', 'appVars'],
+        intellihide: true,
+        multiWinClass: ['gimp']
+    };
+
+   function setHideColor()
+   {
+     bar.style.borderColor = 'rgba(230, 230, 230, 1)';
+     //bar.style.borderColor = '#1E90FF';
+   }
+
+   function setShowColor()
+   {
+     bar.style.borderColor = 'rgba(190, 190, 190, 0.5)';
+   }
+</script>
+
+<div class="bar" id="bar">
+
+    <div class="sm"><div class="item"><a class="sm" title="close" href="cmd::exit">+</a></div></div>
+
+
+    <div class="item"><a href="cmd::defaultBrowser">browser</a></div>
+
+    <div class="item"><a href="cmd::gimp">gimp</a></div>
+
+    <div class="item"><a href="cmd::vlc">vlc</a></div>
+
+    <div class="item"><a href="cmd::gedit">editor</a></div>
+
+    <div class="item"><a href="cmd::gnome-terminal">terminal</a></div>
+
+    <div class="item"><a href="cmd::gksu --description /usr/share/applications/synaptic.desktop /usr/sbin/synaptic">synaptic</a></div>
+
+
+    <!--------------------------------------------------------------------->
+
+    <div class="item"><a href="cmd::defaultFileManager $HOME">home</a></div>
+
+    <div class="item"><a href="cmd::defaultFileManager $HOME/.config">config</a></div>
+
+
+    <!--------------------------------------------------------------------->
+
+    <div class="item"><a href="cmd::defaultBrowser google.com">google</a></div>
+
+</div>
+
+</body>
+
+
+</html>

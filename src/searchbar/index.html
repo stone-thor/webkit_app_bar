@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <link rel="shortcut icon" href="http://www.google.com/favicon.ico">      
+      <title>Google Search</title>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />      
+   
+      <style type="text/css">
+        ::-webkit-scrollbar { 
+            display: none; 
+        }
+        body {
+              font-family: sans;
+              text-align: left;
+              font-size: 8pt;              
+              background: rgba(0,0,0,0.2);
+              padding: 0px;
+              margin: 0px;
+        }
+        .TextField {
+              width: 180px;
+              height: 22px;
+              border: 0px solid;
+              padding: 0px;
+              margin: 0px;            
+
+        }
+        .SearchBtn {
+              height: 22px;                            
+              width: 60px;
+              border: 1px solid;
+              color: #FFFFFF;
+              padding: 0px;
+              margin: 0px;
+              display: inline;        
+        }             
+        .SearchBtn:hover {
+               background-color: rgba(0,0,0,0.2);
+        }
+        div.pg {
+              border: 0px solid;  
+              color: #C0C0C0;
+              line-height: 30px;
+              vertical-align: middle;              
+        }      
+        .frm {
+              display: inline;        
+        }
+        div.sm {
+              text-align: left; 
+              display: inline;
+        }
+        a.sm {
+              color: #E8E8E7; 
+              font-size: 8pt; 
+              padding-left: 3px; 
+              padding-right: 3px; 
+              text-decoration: none;
+        }   
+      </style>
+   
+   </head>   
+
+<body OnLoad="document.search.q.focus();">
+
+<script>
+    var config = {
+        Left: 460,
+        Top: 50,
+        Width: 265,
+        Height: 30,
+        plugin: 'jsObject'
+    };    
+</script>
+ 
+ <script>
+ function doSearch() 
+ {
+    sAddress = 'http://www.google.com/search?q=';
+    sWhat = search.q.value;    
+    app.command('cmd::firefox ' + '"' + sAddress + sWhat + '"');
+    return false;
+ }
+ </script>
+ 
+ <div class="pg">    
+   <div class="sm"><a class="sm" href="cmd::exit">+</a></div>   
+   <form name="search" class="frm" method="get" action="" onsubmit="return doSearch()">
+       <input name="q" type="text" class="TextField" maxlength="255" />
+       <input name="btnG" type="submit" class="SearchBtn" value="search">           
+   </form>
+ </div> 
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>app_bar</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />    
+    <meta http-equiv="Content-Language" content="en-us">    
+
+    <style type="TEXT/CSS">      
+      <!--
+      @import url("default.css");
+      -->
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    var config = {
+        Left: 1120,
+        Top: 450,
+        Width: 600,
+        Height: 500,
+        plugin: 'pageDataSource'
+    };
+    
+    function setData(Element)
+    {
+        document.getElementById(Element).innerHTML = appData[Element];
+    }
+
+    function setImage(Day)
+    {
+        code = appData['Code' + Day];
+        wImages = {
+            '0': 'wind',                        // 'Tornádo'
+            '1': 'storm',                       // 'Tropická bouře'
+            '2': 'wind',                        // 'Hurikán'
+            '3': 'storm',                       // 'Četné bouřky'
+            '4': 'storm',                       // 'Bouřky'
+            '5': 'snow',                        // 'Déšť se sněhem'
+            '6': 'rain',                        // 'Déšť a plískanice'
+            '7': 'rain',                        // 'Mixed Precipitation'
+            '8': 'rain',                        // 'Namrzající mrholení'
+            '9': 'rain',                        // 'Mrholení'
+            '10': 'rain',                       // 'Namrzající déšť'
+            '11': 'rain',                       // 'Mírný déšť'
+            '12': 'rain',                       // 'Déšť'
+            '13': 'snow',                       // 'Sněhové přívaly'
+            '14': 'snow',                       // 'Mírné sněžení'
+            '15': 'snow',                       // 'Drifting Snow'
+            '16': 'snow',                       // 'Sněžení'
+            '17': 'rain',                       // 'Kroupy'
+            '18': 'rain',                       // 'Plískanice'
+            '19': 'wind',                       // 'Prašno'
+            '20': 'fog',                        // 'Mlha'
+            '21': 'fog',                        // 'Opar'
+            '22': 'fog',                        // 'kouřmo'
+            '23': 'storm',                      // 'Bouřlivě'
+            '24': 'wind',                       // 'Větrno'
+            '25': '',                           // 'N/A'
+            '26': 'cloud',                      // 'Zataženo'
+            '27': 'cloud',                      // 'Oblačno'
+            '28': 'cloud',                      // 'Oblačno'
+            '29': 'cloud-sun',                  // 'Polojasno'
+            '30': 'cloud-sun',                  // 'Polojasno'
+            '31': 'sun',                        // 'Jasno'
+            '32': 'sun',                        // 'Jasno'
+            '33': 'sun',                        // 'Pěkně'
+            '34': 'sun',                        // 'Pěkně'
+            '35': 'rain',                       // 'Déšť s kroupami'
+            '36': 'sun',                        // 'Horko'
+            '37': 'storm',                      // 'Osamocené bouřky'
+            '38': 'storm',                      // 'Občasné bouřky'
+            '39': 'rain',                       // 'Občasné přeháňky'
+            '40': 'rain',                       // 'Hustý déšť'
+            '41': 'snow',                       // 'Občasné sněžení'
+            '42': 'snow',                       // 'Husté sněžení'
+            '43': 'snow',                       // 'Husté sněžení'
+            '44': '',                           // 'N/A'
+            '45': 'rain',                       // 'Občasné přeháňky'
+            '46': 'snow',                       // 'Sněhové přeháňky'
+            '47': 'storm',                      // 'Osamocené bouřky s deštěm'
+            'na': '',                           // 'N/A'
+            '-' : ''                            //'N/A'
+        };
+        image = 'icons/' + wImages[code] + '.svg';
+        // alert(image);
+        document.getElementById('Image'+Day).src = image;
+    }
+    
+    function onInitData()
+    {        
+        for (var i = 1; i < 6; i++)
+        {
+            setImage(i);
+            setData('Day' + i);
+            //setData('Date' + i);
+            //setData('Cond' + i);
+            setData('High' + i);            
+            setData('Low' + i);
+        };        
+    }
+</script>
+
+<div class="page">
+
+    <div class="hdr">
+        <span class="hleft">
+            <a class="ico" href='cmd::refresh'><img class="ico" src="icons/update.png"></a>        
+        </span>
+        <span class="hright">
+            <a class="ico" href='cmd::exit'><img class="ico" src="icons/close.png"></a>
+        </span>
+    </div>
+    
+    <div class="D1">      
+
+        <span class="dayitem" id="Day1"> </span>
+        <img class="day" id="Image1" src="">
+        <span class="highitem" id="High1"> </span>
+        <span class="tempdivider" >/</span>
+        <span class="lowitem" id="Low1"> </span>        
+        
+    </div>
+
+    <div class="D2">      
+
+        <span class="dayitem" id="Day2"> </span>
+        <span class="dateitem" id="Date2"> </span>
+        <img class="day" id="Image2" src="">
+        <span class="highitem" id="High2"> </span>       
+        <span class="tempdivider" >/</span>
+        <span class="lowitem" id="Low2"> </span>        
+
+    </div>
+
+    <div class="D3">      
+
+        <span class="dayitem" id="Day3"> </span>
+        <img class="day" id="Image3" src="">
+        <span class="highitem" id="High3"> </span>
+        <span class="tempdivider" >/</span>
+        <span class="lowitem" id="Low3"> </span>
+        
+    </div>
+
+    <div class="D4">      
+
+        <span class="dayitem" id="Day4"> </span>
+        <img class="day" id="Image4" src="">
+        <span class="highitem" id="High4"> </span>
+        <span class="tempdivider" >/</span>
+        <span class="lowitem" id="Low4"> </span>
+        
+    </div>
+
+    <div class="D5">      
+
+        <span class="dayitem" id="Day5"> </span>
+        <img class="day" id="Image5" src="">
+        <span class="highitem" id="High5"> </span>        
+        <span class="tempdivider" >/</span>
+        <span class="lowitem" id="Low5"> </span>
+
+    </div>
+    
+</div>
+
+</body>
+
+</html>

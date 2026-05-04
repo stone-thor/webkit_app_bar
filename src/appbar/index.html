@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head>
+	<title>app_bar</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />    
+    <meta http-equiv="Content-Language" content="en-us">    
+
+    <style type="TEXT/CSS">      
+      <!--
+      @import url("default.css");
+      -->
+    </style>
+
+</head>
+
+<body>
+
+<script>   
+    var config = {
+        Left: 0,
+        Top: 120,
+        Width: 77,
+        Height: 460,
+        defaultBrowser: 'firefox',
+        defaultFileManager: 'thunar',
+        plugin: ['appVars']
+    };
+</script>
+
+<div class="bar">
+       
+    <div class="sm"><a class="sm" title="close" href="cmd::exit">+</a></div>
+       
+    <div class="hdrb title">apps</div>
+
+    <section>
+
+        <div class="item"><a href="cmd::defaultBrowser">browser</a></div>
+            
+        <div class="item"><a href="cmd::inkscape">inkscape</a></div>
+
+        <div class="item"><a href="cmd::gimp">gimp</a></div>
+
+        <div class="item"><a href="cmd::vlc">video</a></div>
+
+        <div class="item"><a href="cmd::terminator -r moc --geometry=850x350 -p moc -e 'mocp -T test'">music</a></div>
+
+        <div class="item"><a href="cmd::geany">geany</a></div>
+
+        <div class="item"><a href="cmd::gnome-terminal">terminal</a></div>
+
+        <div class="item"><a href="cmd::lxappearance">styles</a></div>
+
+        <div class="item"><a href="cmd::gksu --description /usr/share/applications/synaptic.desktop /usr/sbin/synaptic">synaptic</a></div>
+
+        <div class="item"><a href="cmd::gnome-search-tool">search</a></div>
+
+        <div class="item"><a href="cmd::$HOME/.dropbox-dist/dropbox start">dropbox</a></div>
+
+    </section>
+
+    <div class="hdro  title">places</div>
+
+    <section>
+        
+        <div class="item"><a href="cmd::defaultFileManager $HOME">home</a></div>
+
+        <div class="item"><a href="cmd::defaultFileManager $HOME/Python">project</a></div>
+
+        <div class="item"><a href="cmd::defaultFileManager $XDG_DOWNLOAD">download</a></div>
+        
+        <div class="item"><a href="cmd::defaultFileManager $HOME/.config">config</a></div>
+
+        <div class="item"><a href="cmd::defaultFileManager $XDG_PICTURES">pictures</a></div>
+
+        <div class="item"><a href="cmd::defaultFileManager $XDG_MUSIC">music</a></div>
+
+        <div class="item"><a href="cmd::defaultFileManager $XDG_VIDEOS">videos</a></div>
+
+    </section>
+
+    <div class="hdrv  title">actions</div>
+
+    <section>
+        
+        <div class="item"><a href="cmd::$HOME/openbox-logout">logout</a></div>       
+    </section>
+              
+</div>
+
+</body>
+
+
+</html>

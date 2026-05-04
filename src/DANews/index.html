@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>app_bar</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />    
+    <meta http-equiv="Content-Language" content="en-us">        
+
+    <style type="TEXT/CSS">      
+      <!--
+      @import url("default.css");
+      -->
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    var config = {
+        Left: 220,
+        Top: 50,
+        Width: 220,
+        Height: 700,
+        plugin: 'pageDataSource'
+    };
+
+    function setLink(index)
+    {
+        url = appData['Link' + index];
+        url = 'cmd::firefox ' + url ;
+        document.getElementById('Link'+index).href = url;
+    }
+
+    function setImage(index)
+    {
+        url = appData['ThumbUrl' + index];
+        document.getElementById('Image'+index).src = url;
+    }
+    
+    function setData(Element)
+    {
+        document.getElementById(Element).innerHTML = appData[Element];
+    }
+   
+    function onInitData()
+    {               
+        for (var i = 1; i <= appData.Count - 2; i++)
+        {
+            setData('Author' + i);
+            setData('Title' + i);            
+            setLink(i);
+            var img = new Image();
+            img.src = appData['Url'+i];
+            setImage(i);
+        }
+    }
+</script>
+
+<div class = "page">  
+    <div class="hdr">
+        <span class="hleft">
+        <a href='cmd::refresh'><img class="ico" src="update.png"></a>
+        deviantART
+        </span>
+        <span class="hright">
+        <a class="ico" href='cmd::exit'><img class="ico" src="close.png"></a>
+        </span>
+    </div>
+    
+    <div class="row">    
+            <span class="author item" id="Author1"> </span>
+    
+            <span class="item" id="Title1"> </span>
+            <br>
+            <a href="" id="Link1">
+            <img  class="img"  id="Image1" src="">
+            </a>
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author2"> </span>
+            
+            <span class="item" id="Title2"> </span>
+            <br>
+            <a href="" id="Link2">
+            <img  class="img"  id="Image2" src="">
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author3"> </span>
+          
+            <span class="item" id="Title3"> </span>
+            <br>
+            <a href="" id="Link3">
+            <img  class="img"  id="Image3" src="">            
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author4"> </span>
+            
+            <span class="item" id="Title4"> </span>
+            <br>
+            <a href="" id="Link4">
+            <img  class="img"  id="Image4" src="">
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author5"> </span>
+            
+            <span class="item" id="Title5"> </span>
+            <br>
+            <a href="" id="Link5">
+            <img  class="img"  id="Image5" src="">
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author6"> </span>
+            
+            <span class="item" id="Title6"> </span>
+            <br>
+            <a href="" id="Link6">
+            <img  class="img"  id="Image6" src="">
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author7"> </span>
+            
+            <span class="item" id="Title7"> </span>
+            <br>
+            <a href="" id="Link7">
+            <img  class="img"  id="Image7" src="">
+            </a>            
+    </div>
+
+    <div class="row">    
+            <span class="author item" id="Author8"> </span>
+            
+            <span class="item" id="Title8"> </span>
+            <br>
+            <a href="" id="Link8">
+            <img  class="img"  id="Image8" src="">
+            </a>
+    </div>
+</div>
+
+</body>
+
+</html>

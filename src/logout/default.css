@@ -1,0 +1,99 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body
+{ 
+  font-family: "sans", "Arial", Arial, HelveticaCE, "Helvetica CE", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;          
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;   
+}       
+
+:focus {
+    outline: none;
+}
+
+div.page {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+  height: 180px;
+  text-align: left;         
+  background: #EEEEEE;
+}
+
+div.btnbar {
+  position: absolute;
+  left: 10px;
+  top: 65px;
+  width: 380px;
+  height: 64px;
+}
+
+span.btn        {margin-left: 45px; float: left; background-image: url("images/circle.png"); width: 64px; height: 64px;}
+span.btn:hover  {float: left; background-image: url("images/circle1.png"); width: 64px; height: 64px;}
+img.ico         {width: 16px; height: 16px; margin: 8px;}
+
+a { 
+  text-decoration: none;
+}
+
+a.btn { 
+  display: block;
+  text-align: right; 
+  color: #FFFFFF; 
+  text-decoration: none;
+  padding: 16px;
+  margin: 0px;
+}
+
+span { 
+  color: #FFFFFF; 
+}
+
+div.caption { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.1);  
+}
+
+span.caption { 
+  color: #FFFFFF;
+  float: left;
+  margin-left: 10px;
+}
+
+a.close { 
+  float: left;
+  width: 28px;
+  padding: 0px;
+  text-align: center;
+  color: #FFFFFF; 
+  background: #ED8A8A;
+}
+
+a.close:hover { 
+  background: #F49797;
+}
+
+div.bottom { 
+  position: absolute;
+  left: 0px;
+  top: 175px;
+  width: 400px;  
+  height: 5px;
+  text-align: left;
+  background: #ED8A8A;
+}
