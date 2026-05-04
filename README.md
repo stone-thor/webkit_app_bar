@@ -1,3 +1,9 @@
+> [!NOTE]
+> This fork only exist to have the source code as a reference.  
+> I haven't done any changes to the source files, nor do I plan to do so.
+
+---
+
 # Webkit App Bar
 
 
@@ -6,12 +12,20 @@
 **Webkit App Bar** was originally intended as an application launcher (on left side in the screenshot) written in Python with using QtWebKit.
 Now includes a simple plugin system, allowing the creation of any kind of desktop widget.
 
+## Code
+The Source Code lies inside respective branches 
+
+[Qt4 version](https://github.com/stone-thor/webkit_app_bar/tree/webkit_app_bar4/src)
+
+[Qt5 version](https://github.com/stone-thor/webkit_app_bar/tree/webkit_app_bar5/src)
+
+
 ## Download
-Webkit App Bar [Qt4 vesion](https://github.com/codepage/webkit_app_bar/raw/master/dist/webkit_app_bar4.zip)
+Webkit App Bar [Qt4 version](https://github.com/codepage/webkit_app_bar/raw/master/dist/webkit_app_bar4.zip)
 
 for a little bit older distros like Debian 8, \*buntu 16.04 LTS, Mint 18.\*
 
-Webkit App Bar [Qt5 vesion](https://github.com/codepage/webkit_app_bar/raw/master/dist/webkit_app_bar5.zip)
+Webkit App Bar [Qt5 version](https://github.com/codepage/webkit_app_bar/raw/master/dist/webkit_app_bar5.zip)
 
 for distros, which removed Qt4 webkit support, beginning with Debian 9, \*buntu 17.10, Manjaro 17.\* ... and newer
 
