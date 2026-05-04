@@ -1,0 +1,33 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body, a 
+{ 
+  font-family: "snap";
+  font-size: 8pt;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;          
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;  
+}
+
+:focus {
+    outline: none;
+}
+
+
+div.bar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  padding: 0px;  
+  margin: 0px;
+  border: 0px;
+  border-bottom-right-radius: 10px;
+}

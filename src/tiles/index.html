@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+   <head>
+      <title>test</title>
+      <meta http-equiv="btn-Type" btn="text/html; charset=utf-8">
+      <meta charset=utf-8>
+      <meta name="viewport" btn="width=device-width,initial-scale=1">
+
+      <link rel="stylesheet" type="text/css" href="normalize.css"/>
+      <style type="text/css">
+
+         body {
+             overflow: hidden;
+         }
+
+         #page {
+                display: inline-block;
+         }
+
+         #tiles {
+              display: table;
+              border-spacing: 10px;
+              border-collapse: separate;
+              table-layout: fixed;
+         }
+
+         .row {
+              display: table-row;
+         }
+
+         .item {
+              display: table-cell;
+              width: 150px;
+              height: 150px;
+              cursor: default;
+              border-radius: 2px;
+         }
+
+         .btn {
+              width: 150px;
+              height: 150px;
+              opacity: 0.5;
+         }
+
+         .cl1 { background: #0057c8; }
+         .cl2 { background: #ff0000; }
+         .cl3 { background: #cccccc; }
+         .cl4 { background: #3771c8; }
+         .cl5 { background: #333333; }
+         .cl6 { background: #d35f5f; }
+         .cl7 { background: #677821; }
+         .cl8 { background: #ff7f2a; }
+         .cl9 { background: #53676c; }
+
+         .img1 { background: rgba(0,0,0,0) url('google.svg') no-repeat center;}
+         .img2 { background: rgba(0,0,0,0) url('youtube.svg') no-repeat center;}
+         .img3 { background: rgba(0,0,0,0) url('reddit.svg') no-repeat center;}
+         .img4 { background: rgba(0,0,0,0) url('twitter.svg') no-repeat center;}
+         .img5 { background: rgba(0,0,0,0) url('github.svg') no-repeat center;}
+         .img6 { background: rgba(0,0,0,0) url('pocket.svg') no-repeat center;}
+         .img7 { background: rgba(0,0,0,0) url('da.svg') no-repeat center;}
+         .img8 { background: rgba(0,0,0,0) url('stack.svg') no-repeat center;}
+         .img9 { background: rgba(0,0,0,0) url('dropbox.svg') no-repeat center;}
+
+         .item:hover {
+             box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+         }
+
+         #close {
+             position: absolute;
+             width: 20px;
+             height: 20px;
+             top: 0px;
+             right: 0px;
+             background: #4D4D4D url('close.svg') no-repeat center;
+             border-radius: 6px;
+         }
+         #close:hover {
+             background: #C83F3F url('close.svg') no-repeat center;
+         }
+      </style>
+
+   </head>
+
+<body>
+
+<script>
+         var config = {
+            Left: 300,
+            Top: 250,
+            Width: 490,
+            Height: 490,
+            defaultBrowser: 'firefox',
+            plugin: ['appVars', 'jsObject', 'appInit']
+         };
+
+         const link = {
+             google: 'google.com',
+             youtube: 'youtube.com',
+             reddit: 'reddit.com',
+             twitter: 'twitter.com',
+             github: 'github.com',
+             pocket: 'getpocket.com',
+             da: 'deviantart.com',
+             stack: 'stackoverflow.com',
+             dropbox: 'dropbox.com'
+         };
+
+         function onClick(evt){
+             let id = evt.target.id;
+             app.command('cmd::defaultBrowser ' + link[id]);
+             app.command('cmd::exit');
+         }
+
+         window.onload = function() {
+             var items = Array.from(document.getElementsByClassName('btn'));
+
+             items.forEach(item => item.addEventListener('click', onClick));
+
+             document.addEventListener('keydown', event => event.keyCode == 27 ? app.command('cmd::exit') : null);
+
+             document.getElementById('close').addEventListener('click', event => app.command('cmd::exit'));
+         }
+</script>
+
+<div id="page">
+   <div id="tiles">
+        <div class="row">
+             <div class="item cl1">
+                  <div id="google" class="btn img1">
+                  </div>
+             </div>
+
+             <div class="item cl2">
+                  <div id="youtube" class="btn img2">
+                  </div>
+             </div>
+
+             <div class="item cl3">
+                  <div id="reddit" class="btn img3">
+                  </div>
+                  <div id="close"></div>
+             </div>
+        </div>
+
+        <div class="row">
+             <div class="item cl4">
+                  <div id="twitter" class="btn img4">
+                  </div>
+             </div>
+
+             <div class="item cl5">
+                  <div id="github" class="btn img5">
+                  </div>
+             </div>
+
+             <div class="item cl6">
+                  <div id="pocket" class="btn img6">
+                  </div>
+             </div>
+        </div>
+
+        <div class="row">
+             <div class="item cl7">
+                  <div id="da" class="btn img7">
+                  </div>
+             </div>
+
+             <div class="item cl8">
+                  <div id="stack" class="btn img8">
+                  </div>
+             </div>
+
+             <div class="item cl9">
+                  <div id="dropbox" class="btn img9">
+                  </div>
+             </div>
+        </div>
+   </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+/* hide scrollbars */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body, a 
+{ 
+  font-family: "sans";
+  font-size: 8pt;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;          
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;  
+}
+
+:focus {
+    outline: none;
+}
+
+a { 
+  text-decoration: none;
+}
+
+div.bar {
+  position: absolute;
+  text-align: right;
+  left: 0px;
+  top: 0px;
+  width: 75px;
+  height: 300px;
+  padding: 0px;  
+  margin: 0px;  
+  background: rgba(0, 0, 0, 0.2);
+}
+
+a:hover { 
+
+}
+
+a.sm {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline;
+  padding: 2px;
+  margin: 0px;
+  margin-right: 4px;
+}
+
+a.sm:hover { 
+  background: none;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+}

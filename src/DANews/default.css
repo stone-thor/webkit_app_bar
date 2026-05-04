@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Play/Play-Regular.ttf');
+}
+
+
+body
+{ 
+  font-family: "Play", "sans", "Arial", Arial, HelveticaCE, "Helvetica CE", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;          
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;
+}       
+
+:focus {
+    outline: none;
+}
+
+div.page {
+  width: 200px; 
+  height: 570px; 
+  border: 0px solid; 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0,0,0,0.3);
+  padding: 0px 0px 0px 0px;
+}
+
+div.row {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    //width: 50px;
+    //height: 20px;
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 10px;    
+    color: #E5E5E5;
+}
+
+img {
+    width: 75px; 
+    height: 42px;
+    padding: 0px;
+}
+
+img.ico {
+    width: 16px; 
+    height: 16px;
+    margin-top: 6px;    
+}
+
+.item {
+  color: #E5E5E5;  
+}
+
+.author {
+  color: #FFFFFF;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;    
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+div.hdr {
+    width: 100%;
+    padding: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    
+    background: rgba(20,20,20,0.7);
+}
+
+span.hleft {
+    padding-right: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #EC2D55;
+}
+
+span.hright {
+    padding-left: 40px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <link rel="stylesheet" href="linear.css">
+    <link rel="stylesheet" href="default.css" media="screen" title="no title" charset="utf-8">
+
+
+</head>
+
+<body>
+    <script>
+        var config = {
+            Left: 300,
+            Top: 250,
+            Width: 470,
+            Height: 150,
+            plugin: ['jsObject', 'appInit']
+        };
+
+        var commands = {
+            "cancel": "exit",
+            "logout": "openbox --exit",
+            "reboot": "dbus-send --system --print-reply --dest=\"org.freedesktop.ConsoleKit\" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart",
+            "shutdown": "dbus-send --system --print-reply --dest=\"org.freedesktop.ConsoleKit\" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop"
+        };
+
+        var cmdKeys = {
+            27: 'cancel',
+            67: 'cancel',
+            76: 'logout',
+            82: 'reboot',
+            81: 'cancel',
+            83: 'shutdown'
+        };
+
+        onAppKeyDown = function(event) {
+            var evt, k, ref, ref1;
+            evt = event != null ? event : window.event;
+            k = (ref = (ref1 = evt.which) != null ? ref1 : evt.charCode) != null ? ref : evt.keyCode;
+            if (k in cmdKeys) {
+                var cmd = cmdKeys[k];
+                app.command('cmd::' + commands[cmd]);
+            }
+        };
+
+        getElement = function(el, cls) {
+            while (el) {
+                if (el.classList.contains(cls)) {
+                  return el;
+                }
+                el = el.parentElement;
+            }
+        };
+
+        onBtnClick = function(e) {
+            var element;
+            element = event.target || event.srcElement;
+            element = getElement(element, "btn");
+            app.command('cmd::' + commands[element.id]);
+        }
+
+        window.onload = function() {
+            var id;
+            for (id in commands) {
+                document.getElementById(id).addEventListener('click', onBtnClick);
+            }
+            document.addEventListener('keydown', onAppKeyDown);
+        }
+    </script>
+
+  <div class="outer", id="outer">
+
+    <div class="btn" id="cancel">
+        <div class="inner">
+            <div class="lnr lnr-cross"></div> <br/>
+            <div class="hint">cancel</div>
+        </div>
+    </div>
+
+    <div class="btn" id="logout">
+        <div class="inner">
+            <div class="lnr lnr-exit"></div> <br/>
+            <div class="hint">logout</div>
+        </div>
+    </div>
+
+    <div class="btn" id="reboot">
+        <div class="inner">
+            <div class="lnr lnr-sync"></div> <br/>
+            <div class="hint">reboot</div>
+        </div>
+    </div>
+
+    <div class="btn" id="shutdown">
+        <div class="inner">
+            <div class="lnr lnr-power-switch"></div> <br/>
+            <div class="hint">shutdown</div>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

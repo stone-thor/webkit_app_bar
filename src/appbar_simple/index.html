@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>app_bar</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <style type="TEXT/CSS">
+        * {
+          padding: 0px;
+          margin: 0px;
+          border: 0px;
+          text-decoration: none;
+          cursor: default;
+        }
+
+        body, p {
+          font-family: "sans";
+          font-size: 8pt;
+          text-align: left;
+          -webkit-user-select: none;
+        }
+
+        :focus {outline: none;}
+
+        ::-webkit-scrollbar {display: none;}
+
+        .item a {
+          font-size: 10pt;
+          text-align: right;
+          color: #FFFFFF;
+          display: block;
+          padding: 0px 4px 0px 4px;
+        }
+
+        .item {margin-bottom: 2px;}
+
+        .section {
+          padding: 0px 4px 0px 4px;
+          margin-top: 4px;
+        }
+
+        div.bar {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 66px;
+          height: 220px;
+          background: rgba(0,0,0,0.5);
+          border-radius: 0px 6px 6px 0px;
+        }
+
+        div.sm {
+          display: block;
+          text-align: right;
+          padding-top: 5px;
+          margin-bottom: -8px;
+        }
+
+        .item a:hover {background-color: #BE4148;}
+
+        a.sm {
+          color: #FFFFFF;
+          display: inline;
+          margin-right: 6px;
+          padding: 0px 4px 0px 4px;
+        }
+
+        a.sm:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+          color: #FFFFFF;
+        }
+
+        div.coloro {color: #FF6140;}
+        div.colorb {color: #429FFF;}
+
+        div.hdr {
+          padding: 5px 0px 5px 0px;
+          margin-bottom: 5px;
+          text-align: center;
+          border-bottom: solid 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    var config = {
+        Left: 0,
+        Top: 200,
+        Width: 66,
+        Height: 220
+    };
+</script>
+
+<div class="bar">
+
+    <div class="sm"><a class="sm" title="close" href="cmd::exit">+</a></div>
+
+    <div class="section">
+
+        <div class="hdr coloro">apps</div>
+
+        <div class="item"><a href="cmd::defaultBrowser">browser</a></div>
+
+        <div class="item"><a href="cmd::gimp">gimp</a></div>
+
+        <div class="item"><a href="cmd::vlc">vlc</a></div>
+
+        <div class="item"><a href="cmd::gedit">editor</a></div>
+
+        <div class="item"><a href="cmd::gnome-search-tool">search</a></div>
+
+    </div>
+
+    <div class="section">
+
+        <div class="hdr colorb">places</div>
+
+        <div class="item"><a href="cmd::thunar $HOME">home</a></div>
+
+        <div class="item"><a href="cmd::thunar $HOME/.config">config</a></div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
